@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/8646bc16bf.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+           <script src="dist/ecg-webcomponent.js"></script>
+    <style>
+        #order {
+            float: right;
+            width: 50%;
+        }
+        .bounce {
+            display: inline-block;
+            position: relative;
+            -moz-animation: bounce 0.5s infinite linear;
+            -o-animation: bounce 0.5s infinite linear;
+            -webkit-animation: bounce 0.5s infinite linear;
+            animation: bounce 0.5s infinite linear;
+            color:000;
+        }
+
+        @-webkit-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-moz-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-o-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-ms-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+      #status{
+          letter-spacing: 12px;
+          text-align: center;
+          vertical-align: middle;
+      }
+    </style>  
+</head>
+
+<body onload="" style="background-color:#353535;">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <nav class="navbar navbar-dark bg-dark border border-success border border-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="letter-spacing: 6px">
+                <lord-icon
+                    src="https://cdn.lordicon.com/ghiijzmu.json"
+                    trigger="loop"
+                    colors="primary:#0a5c15,secondary:#16c72e"
+                    style="width:60px;height:60px">
+                </lord-icon>
+                Efeu
+              </a>
+            </div>
+          </nav>
+        <table class="table table-dark table-striped border border-light">
+            <thead>
+                <tr>
+                  <th scope="col"><i class="fas fa-ruler-combined"></i></th>
+                  <th scope="col">Measuring</th>
+                  <th scope="col">Value</th>
+                  <th scope="col">Unit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><i class="fas fa-temperature-high"></i></td>
+                    <td>Temperarture</td>
+                    <td id="tftemperature"></td>
+                    <td>C°</td>   
+                </tr>
+                <tr>
+                    <td><i class="fas fa-tint"></i></td>
+                    <td>Humidity</td>
+                    <td id="tfhumidity"></td>
+                    <td>%</td>  
+                </tr>
+                <tr>
+                    <td><i class="fas fa-seedling"></i></td>
+                    <td>Soil Moisture</td>
+                    <td id="tfsoilmoist">45</td>
+                    <td>%</td> 
+                </tr>
+                <tr>
+                    <td><i class="fas fa-compress-alt"></i></td>
+                    <td>Air Preasure</td>
+                    <td id="tfpreasure">78</td>
+                    <td>mbar</td>
+                </tr>
+              </tbody>
+        </table>
+        
+
+</body>
+    
+</html>
