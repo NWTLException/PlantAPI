@@ -33,7 +33,7 @@ function getHumidityAndTemperature(){
     fetch('http://127.0.0.1:8000/temphum')
     .then(response=>response.json())
     .then(data=>{
-        document.getElementById("tftemperature").innerHTML=data.element.temp;
-        document.getElementById("tfhumidity").innerHTML=data.element.humidity;
+        document.getElementById("tftemperature").innerHTML=data.temp;
+        document.getElementById("tfhumidity").innerHTML=data.humidity;
     })
 }
