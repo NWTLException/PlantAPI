@@ -20,7 +20,7 @@ user = ["Kilian","Gabriel","Simon"]
 
 @app.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("sensors.html",{"request":request})
+    return templates.TemplateResponse("weather.html",{"request":request})
 
 users=[]
 

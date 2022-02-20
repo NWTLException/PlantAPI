@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/8646bc16bf.js" crossorigin="anonymous"></script>
+            <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+           <script src="/static/request.js"></script>
+    <style>
+        #order {
+            float: right;
+            width: 50%;
+        }
+        .bounce {
+            display: inline-block;
+            position: relative;
+            -moz-animation: bounce 0.5s infinite linear;
+            -o-animation: bounce 0.5s infinite linear;
+            -webkit-animation: bounce 0.5s infinite linear;
+            animation: bounce 0.5s infinite linear;
+            color:000;
+        }
+
+        @-webkit-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-moz-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-o-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @-ms-keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+        @keyframes bounce {
+            0% { top: 0; }
+            50% { top: -0.2em; }
+            70% { top: -0.3em; }
+            100% { top: 0; }
+        }
+      #status{
+          letter-spacing: 12px;
+          text-align: center;
+          vertical-align: middle;
+      }
+    </style>  
+</head>
+
+<body onload="loopRequest()" style="background-color:#353535;">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <nav class="navbar navbar-dark bg-dark border border-primary border border-3">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" style="letter-spacing: 4px; text-align: right">
+                    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/mypzgycw.json"
+                            trigger="loop"
+                            colors="primary:#7166ee,secondary:#e4e4e4"
+                            style="width:55px;height:55px">
+                        </lord-icon>
+                Temperarture <br> and Humidity
+              </a>
+            </div>
+          </nav>
+        <table class="table table-dark table-striped border border-primary">
+            <thead>
+                <tr>
+                  <th scope="col"><i class="fas fa-ruler-combined"></i></th>
+                  <th scope="col">Measuring</th>
+                  <th scope="col">Value</th>
+                  <th scope="col">Unit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><i class="fas fa-temperature-high"></i></td>
+                    <td>Temperarture</td>
+                    <td id="tftemperature"></td>
+                    <td>C°</td>   
+                </tr>
+                <tr>
+                    <td><i class="fas fa-tint"></i></td>
+                    <td>Humidity</td>
+                    <td id="tfhumidity"></td>
+                    <td>%</td>  
+                </tr>
+              </tbody>
+        </table>
+        
+
+</body>
+    
+</html>
