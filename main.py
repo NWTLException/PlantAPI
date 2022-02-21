@@ -1,4 +1,3 @@
-import imp
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -6,6 +5,13 @@ from fastapi.staticfiles import StaticFiles
 import time
 import board
 import adafruit_dht
+
+# pip install adafruit-circuitpython-dht
+# pip install jinja2 
+# pip install fastapi
+# pip install "uvicorn[standard]"
+
+
 
 
 
