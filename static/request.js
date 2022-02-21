@@ -1,5 +1,5 @@
 function getAllUsers(){
-    fetch('http://127.0.0.1:8000/users')
+    fetch('http://10.0.0.17:8000/users')
     .then(response=>response.json())
     .then(data=>{
         let html="<table>";
@@ -30,7 +30,7 @@ function loopRequest() {         //  create a loop function
 
 function getHumidityAndTemperature(){
 
-    fetch('http://127.0.0.1:8000/temphum')
+    fetch('http://10.0.0.17:8000/temphum')
     .then(response=>response.json())
     .then(data=>{
         document.getElementById("tftemperature").innerHTML=data.temp;

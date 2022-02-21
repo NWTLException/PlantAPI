@@ -6,9 +6,9 @@ import time
 import board
 import adafruit_dht
 
-# pip install adafruit-circuitpython-dht
+# pip3 install adafruit-circuitpython-dht
 # pip install jinja2 
-# pip install fastapi
+# pip3 install fastapi
 # pip install "uvicorn[standard]"
 
 
