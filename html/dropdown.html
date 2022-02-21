@@ -24,12 +24,12 @@
             <div class="col-5">
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="selection">
                     <option selected>Select an Option</option>
-                    <option value="1" onshow="loopRequest()">Temp Hum</option>
-                    <option value="2" onshow="loopRequest()">Plant</option>
+                    <option value="1">Temp Hum</option>
+                    <option value="2">Plant</option>
                 </select>
             </div>
             <div class="col">
-                <div id='temphum' style='display:none;'>
+                <div id='temphum' style='display:none;' onload="loopRequest()">
                         <div class="position-absolute top-50 start-50 translate-middle">
                             <nav class="navbar navbar-dark bg-dark border border-primary border border-3">
                                 <div class="container-fluid">
@@ -73,7 +73,7 @@
                  </div>
          
           </div>
-          <div id="plant" style='display:none;'>
+          <div id="plant" style='display:none;' onload="loopRequest()">
             <div class="position-absolute top-50 start-50 translate-middle">
                 <nav class="navbar navbar-dark bg-dark border border-success border border-3">
                     <div class="container-fluid">
