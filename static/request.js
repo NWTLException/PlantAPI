@@ -35,5 +35,7 @@ function getHumidityAndTemperature(){
     .then(data=>{
         document.getElementById("tftemperature").innerHTML=data.temp;
         document.getElementById("tfhumidity").innerHTML=data.humidity;
+        document.getElementById("tftemperaturePlant").innerHTML=data.temp;
+        document.getElementById("tfhumidityPlant").innerHTML=data.humidity;
     })
 }

@@ -29,7 +29,7 @@
                 </select>
             </div>
             <div class="col">
-                <div id='temphum' style='display:none;' onload="loopRequest()">
+                <div id='temphum' style='display:none;'>
                         <div class="position-absolute top-50 start-50 translate-middle">
                             <nav class="navbar navbar-dark bg-dark border border-primary border border-3">
                                 <div class="container-fluid">
@@ -73,7 +73,7 @@
                  </div>
          
           </div>
-          <div id="plant" style='display:none;' onload="loopRequest()">
+          <div id="plant" style='display:none;'>
             <div class="position-absolute top-50 start-50 translate-middle">
                 <nav class="navbar navbar-dark bg-dark border border-success border border-3">
                     <div class="container-fluid">
@@ -101,25 +101,25 @@
                         <tr>
                             <td><i class="fas fa-temperature-high"></i></td>
                             <td>Temperarture</td>
-                            <td id="tftemperature"></td>
+                            <td id="tftemperaturePlant"></td>
                             <td>C°</td>   
                         </tr>
                         <tr>
                             <td><i class="fas fa-tint"></i></td>
                             <td>Humidity</td>
-                            <td id="tfhumidity"></td>
+                            <td id="tfhumidityPlant"></td>
                             <td>%</td>  
                         </tr>
                         <tr>
                             <td><i class="fas fa-seedling"></i></td>
                             <td>Soil Moisture</td>
-                            <td id="tfsoilmoist">45</td>
+                            <td id="tfsoilmoistPlant">45</td>
                             <td>%</td> 
                         </tr>
                         <tr>
                             <td><i class="fas fa-compress-alt"></i></td>
                             <td>Air Preasure</td>
-                            <td id="tfpreasure">78</td>
+                            <td id="tfpreasurePlant">78</td>
                             <td>mbar</td>
                         </tr>
                       </tbody>
