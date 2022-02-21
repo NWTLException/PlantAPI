@@ -25,6 +25,7 @@
                 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="selection">
                     <option selected>Select an Option</option>
                     <option value="1">Temp Hum</option>
+                    <option value="2">Plant</option>
                 </select>
             </div>
             <div class="col">
@@ -68,18 +69,77 @@
                                     </tr>
                                   </tbody>
                             </table>
+                        
                  </div>
-            </div>
+         
           </div>
+          <div id="plant" style='display:none;'>
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <nav class="navbar navbar-dark bg-dark border border-success border border-3">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#" style="letter-spacing: 6px">
+                        <lord-icon
+                            src="https://cdn.lordicon.com/ghiijzmu.json"
+                            trigger="loop"
+                            colors="primary:#0a5c15,secondary:#16c72e"
+                            style="width:60px;height:60px">
+                        </lord-icon>
+                        Efeu
+                      </a>
+                    </div>
+                  </nav>
+                <table class="table table-dark table-striped border border-light">
+                    <thead>
+                        <tr>
+                          <th scope="col"><i class="fas fa-ruler-combined"></i></th>
+                          <th scope="col">Measuring</th>
+                          <th scope="col">Value</th>
+                          <th scope="col">Unit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td><i class="fas fa-temperature-high"></i></td>
+                            <td>Temperarture</td>
+                            <td id="tftemperature"></td>
+                            <td>C°</td>   
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-tint"></i></td>
+                            <td>Humidity</td>
+                            <td id="tfhumidity"></td>
+                            <td>%</td>  
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-seedling"></i></td>
+                            <td>Soil Moisture</td>
+                            <td id="tfsoilmoist">45</td>
+                            <td>%</td> 
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-compress-alt"></i></td>
+                            <td>Air Preasure</td>
+                            <td id="tfpreasure">78</td>
+                            <td>mbar</td>
+                        </tr>
+                      </tbody>
+                </table>
+         </div>
+    </div>
     </div>
 </body>
 
 <script>
     $('#selection').on('change', function() {
         if (this.value === "1") {
+            $("#plant").hide();
             $("#temphum").show();
-        } else {
+        } else if(this.value === "2"){
             $("#temphum").hide();
+            $("#plant").show();
+        }else{
+            $("#temphum").hide();
+            $("#plant").hide();
         }
     });
 </script>
