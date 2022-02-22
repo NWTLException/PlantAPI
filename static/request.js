@@ -39,3 +39,4 @@ function getHumidityAndTemperature(){
         document.getElementById("tfhumidityPlant").innerHTML=data.humidity;
     })
 }
+
