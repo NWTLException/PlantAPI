@@ -18,11 +18,12 @@ var i = 1;                  //  set your counter to 1
 function loopRequest() {         //  create a loop function
   setTimeout(function() {   //  call a 3s setTimeout when the loop is called
        //  your code here
-        getHumidityAndTemperature();               //  increment the counter
+        getHumidityAndTemperature(); 
+        getSoilMoisture();              //  increment the counter
     if (i < 2) {           //  if the counter < 10, call the loop function
       loopRequest();             //  ..  again which will trigger another 
     }                       //  ..  setTimeout()
-  }, 3000)
+  }, 5000)
 }
 
     
@@ -39,4 +40,17 @@ function getHumidityAndTemperature(){
         document.getElementById("tfhumidityPlant").innerHTML=data.humidity;
     })
 }
+
+
+function getSoilMoisture(){
+    
+    fetch('http://192.168.10.214/api/read/moisture/')
+    .then(response => response.json())
+    .then(data =>{
+      var html=`${data.moisture}`;
+      document.getElementById("tfsoilmoist").innerHTML=html;
+    })
+    
+
+} 
 

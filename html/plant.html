@@ -12,7 +12,7 @@
  
 </head>
 
-<body onload="getSoilMoisture()" style="background-color:#353535;">
+<body onload="loopRequest()" style="background-color:#353535;">
     <div class="position-absolute top-50 start-50 translate-middle">
         <nav class="navbar navbar-dark bg-dark border border-success border border-3">
             <div class="container-fluid">
@@ -52,7 +52,7 @@
                 <tr>
                     <td><i class="fas fa-seedling"></i></td>
                     <td>Soil Moisture</td>
-                    <td id="tfsoilmoist">45</td>
+                    <td id="tfsoilmoist"></td>
                     <td>%</td> 
                 </tr>
                 <tr>
@@ -67,41 +67,5 @@
 
 </body>
 
-<script>
-
-  function getSoilMoisture(){
-    var username='grakid18';
-    var password='Cisco123';
-      fetch('http://192.168.10.214/api/read/moisture/', {
-              headers:new Headers({
-                "Authorization": `Basic ${btoa(`${username}:${password}`)}`
-              }),
-            })
-      .then(response => response.json())
-      .then(json => console.log(json));
-
-}
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-   
-
-
-</script>
     
 </html>
