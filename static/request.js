@@ -44,7 +44,7 @@ function getHumidityAndTemperature(){
 
 function getSoilMoisture(){
     
-    fetch('http://192.168.10.214/api/read/moisture/')
+    fetch('http://192.168.10.218/api/read/moisture/')
     .then(response => response.json())
     .then(data =>{
       var html=`${data.moisture}`;
