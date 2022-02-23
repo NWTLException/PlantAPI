@@ -48,7 +48,7 @@ function getSoilMoisture(){
     .then(response => response.json())
     .then(data =>{
       var html=`${data.moisture}`;
-      document.getElementById("tfsoilmoist").innerHTML=html;
+      document.getElementById("tfsoilmoistPlant").innerHTML=html;
     })
     
 
