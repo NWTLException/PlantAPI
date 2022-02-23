@@ -26,7 +26,7 @@ user = ["Kilian","Gabriel","Simon"]
 
 @app.get("/")
 async def root(request: Request):
-    return templates.TemplateResponse("dropdown.html",{"request":request})
+    return templates.TemplateResponse("index.html",{"request":request})
 
 users=[]
 
