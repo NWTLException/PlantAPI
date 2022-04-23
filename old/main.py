@@ -50,6 +50,8 @@ async def getAllUsers():
     return users
 
 
+
+
 @app.get("/temphum")
 async def getTempAndHum():
     while True:
