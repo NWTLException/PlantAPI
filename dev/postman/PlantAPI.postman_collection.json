@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "b1d0f9c3-2a41-4610-9969-f526bc573e9a",
+		"name": "PlantAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all readings from Sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.137.128:8000/readings/all",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"137",
+						"128"
+					],
+					"port": "8000",
+					"path": [
+						"readings",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
