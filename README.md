@@ -1,5 +1,5 @@
 # PlantAPI
-![picture 1](../images/0e32fea998ae6e30804ba9b25ad32d47471b5d4aced70ea9d748500322c24c88.png)  
+![picture 1](https://cdn.discordapp.com/attachments/535882543644540971/971764608572489778/unknown.png)  
 
 
 
