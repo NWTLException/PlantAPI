@@ -1,5 +1,7 @@
-# PlantAPI
-![picture 1](https://cdn.discordapp.com/attachments/535882543644540971/971764608572489778/unknown.png)  
+![LogoName](https://cdn.discordapp.com/attachments/535882543644540971/971766721532792872/Logo.png)
+
+
+![picture 1](https://cdn.discordapp.com/attachments/535882543644540971/971767079894126642/unknown.png)  
 
 
 
