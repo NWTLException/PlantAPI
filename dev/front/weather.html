@@ -4,24 +4,26 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./imgs/faviconpng.png">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>EnviMeter</title>
   </head>
-  <body onload="getData();execute();" style="font-family: Consolas; background-color: #212529;">
+  <body onload="execute();getLast24h();" style="font-family: Consolas; background-color: #212529;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
     <script src="./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
-    <script src="./request.js"></script>
     <script src="./getTemp.js"></script>
+    <script src="./tempGraph.js"></script>
+
 
     
     <nav class="navbar navbar-dark bg-dark border-bottom border-3 border-success" >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">ECI Dashboard</a>
+        <a class="navbar-brand" href="#">EnviMeter Dashboard</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,9 +45,20 @@
     <div class="container">
       <div class="row row-cols-2 row-cols-lg-3">
         <div class="col">
+          <button onclick="loadTempChart();">Load Graph</button>
+          <button onclick="update();">Refresh</button>
           <div class="col" style="color: aliceblue;">
             <h6>Current Temperature:</h6>
-            <div id="tempOut" >
+            <div id="tempOut" style="color: #FFAC1C;">
+            </div>
+            <h6>Current Humidity:</h6>
+            <div id="humOut" style="color: #89CFF0;">
+            </div>
+            <h6>Current atmospheric Preassure:</h6>
+            <div id="prsrOut" style="color: #A9A9A9;">
+            </div>
+            <h6>Current VOC:</h6>
+            <div id="airquOut" style="color: #AFE1AF;">
             </div>
         </div>
         </div>

@@ -4,21 +4,29 @@ function Sleep(milliseconds) {
 
 function execute(){
     setInterval(function(){
-        getCurrTemp();
-    }, 3000)
+        getReadings();
+    }, 1000)
     
 }
 
 
 
 
-function getCurrTemp(){
-    fetch('http://192.168.10.249:8000/readings')
+function getReadings(){
+    fetch('http://192.168.137.128:8000/readings/all')
 	.then(response=>response.json())
 	.then(data=>{
-        let reading;
 		console.log(data)
-		reading = data.temp;
-        document.getElementById('tempOut').innerHTML=`<b>${reading}°C</b>`;
+        document.getElementById('tempOut').innerHTML=`<b>${data.temp} °C</b>`;
+        document.getElementById('humOut').innerHTML=`<b>${data.hum} %</b>`;
+        document.getElementById('prsrOut').innerHTML=`<b>${data.prsr} hPa</b>`;
+        document.getElementById('airquOut').innerHTML=`<b>${data.airqu} Ω</b>`;
     })    
 }
+
+
+
+
+
+
+
