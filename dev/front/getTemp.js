@@ -13,7 +13,7 @@ function execute(){
 
 
 function getReadings(){
-    fetch('http://192.168.137.128:8000/readings/all')
+    fetch('http://192.168.137.206:8000/readings/all')
 	.then(response=>response.json())
 	.then(data=>{
 		console.log(data)

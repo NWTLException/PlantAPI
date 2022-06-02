@@ -1,21 +1,17 @@
-var temperature = []
 var humidity = []
 
-function getLast24h(){
+function getLast24hHum(){
     fetch('http://192.168.137.206:8000/readings/last24')
     .then(response=>response.json())
     .then(data=>{
 		console.log(data)
         data.forEach(d=>{
-            console.log(d.temp)
-            temperature.push(d.temp)
-			console.log(d.hum)
+            console.log(d.hum)
             humidity.push(d.hum)
         })  
     }
 	)
 
-	console.log(temperature)
 	console.log(humidity)
 	
 
@@ -24,7 +20,7 @@ function getLast24h(){
 
 
 
-function loadTempChart(){
+function loadHumChart(){
 
 	const labels = [
 		'00:00',
@@ -69,7 +65,7 @@ function loadTempChart(){
 		y: {
 		  title: {
 			display: true,
-			text: 'Values',
+			text: 'Humidity',
 		  },
 		}
 	  };
@@ -77,18 +73,11 @@ function loadTempChart(){
 	  const data = {
 		labels: labels,
 		datasets: [{
-		  label: 'Temperature C°',
+		  label: '%',
 		  backgroundColor: 'rgb(231, 158, 79)',
 		  borderColor: 'rgb(160, 83, 68)',
-		  data: temperature,
-		},
-		{
-			label: 'Humidity %',
-			backgroundColor: 'rgb(0,0,205)',
-			borderColor: 'rgb(0,191,255)',
-			data: humidity,
-		  }
-	]
+		  data: humidity,
+		}]
 	};
 
 	const config = {
@@ -100,14 +89,14 @@ function loadTempChart(){
 		plugins: [background]
 	  };
 
-	  const myChart2 = new Chart(
-		document.getElementById('myChart2'),
+	  const myChart3 = new Chart(
+		document.getElementById('myChart3'),
 		config
 	  );
 
 	  function update(){
-		getLast24h();
-		myChart2.data.datasets[0].data=temperature;
+		getLast24hHum();
+		myChart3.data.datasets[0].data=humidity;
 		
 	}
 	

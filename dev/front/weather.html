@@ -18,6 +18,7 @@
     <script src="./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.min.js"></script>
     <script src="./getTemp.js"></script>
     <script src="./tempGraph.js"></script>
+    <script src="./humGraph.js"></script>
 
 
     
@@ -45,7 +46,8 @@
     <div class="container">
       <div class="row row-cols-2 row-cols-lg-3">
         <div class="col">
-          <button onclick="loadTempChart();">Load Graph</button>
+          <button onclick="loadTempChart();">Load Temperature Graph</button>
+          <button onclick="myChart3.destroy();loadHumChart();">Load Humidity Graph</button>
           <button onclick="update();">Refresh</button>
           <div class="col" style="color: aliceblue;">
             <h6>Current Temperature:</h6>
@@ -65,6 +67,12 @@
         <div class="col">
           <div style="height:40vh; width:40vw">
           <canvas id="myChart2"></canvas>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div style="height:40vh; width:40vw">
+          <canvas id="myChart3"></canvas>
         </div>
       </div>
         <div class="col">

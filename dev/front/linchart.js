@@ -5,7 +5,7 @@ function loadLineChart(){
   var preassure=new Array;
   
   
-    fetch('http://192.168.10.249:8000/testData')
+    fetch('http://192.168.137.206:8000/testData')
     .then(response=>response.json())
     .then(data=>{
       data.temp.forEach(e=>{

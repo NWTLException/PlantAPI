@@ -3,27 +3,19 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from csv import DictWriter
-from datetime import datetime
+from last24h import get_last_24h
+
+## sudo uvicorn main:app --host 0.0.0.0
 
 class Readings(BaseModel):
-    dtm: datetime
+    dtm: str
     temp: float
     hum: float
     prsr: float
     airqu: float
+    smoi: float
 
-class reading: 
-    def __init__(self,datetime,temp,hum,prsr,voc,smoi): 
-        self.datetime = datetime 
-        self.temp = temp
-        self.hum = hum
-        self.prsr = prsr
-        self.voc = voc
-        self.smoi = smoi 
-
-last24=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
-
-field_names = ['timestamp','temp', 'hum', 'prsr', 'voc','smoi']
+field_names = ['dtm','temp', 'hum', 'prsr', 'voc','smoi']
 
 app = FastAPI()
 
@@ -45,7 +37,7 @@ async def root():
 async def recieveReadings(readings:Readings):
     global data
     data=readings
-    dict={ 'datetime':data.dtm,
+    dict={ 'dtm':data.dtm,
            'temp':data.temp,
            'hum':data.hum,
            'prsr':data.prsr,
@@ -63,4 +55,5 @@ async def getAllReadings():
 
 @app.get("/readings/last24")
 async def getAllReadings():
-    return last24
+    li=get_last_24h()
+    return li
